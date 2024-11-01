@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Section Form</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="card mb-5">
+        <div class="card-body">
+          <div id="alert1" class="alert" role="alert"></div>
+          <h2 class="card-title text-center">
+            Formulaire de Profil et de Satisfaction des Employés
+          </h2>
+
+          <form id="multiSectionForm">
+            <!-- Section 1 -->
+            <div class="section" id="section1">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input name="name" type="text" id="name" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="age">Age:</label>
+                <input
+                  name="number"
+                  type="number"
+                  id="age"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="post">Poste Actuel:</label>
+                <input
+                  name="name"
+                  type="text"
+                  id="Poste"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="genre">Genre:</label>
+                <input
+                  name="genre"
+                  type="text"
+                  id="genre"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="education">Éducation:</label>
+                <input
+                  name="education"
+                  type="text"
+                  id="education"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="specialisation">Spécialisation:</label>
+                <input
+                  name="specialisation"
+                  type="text"
+                  id="specialisation"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="langue">Langues Parlées:</label>
+                <input
+                  name="number "
+                  type="number"
+                  id="langues"
+                  class="form-control"
+                />
+              </div>
+              <div class="d-flex justify-content-end">
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  onclick="nextSection(2)"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="section d-none" id="section2">
+              <div class="form-group">
+                <label for="email">Adresse E-mail Professionnelle:</label>
+                <input
+                  name="email"
+                  type="email"
+                  id="email"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input
+                  name="phone"
+                  type="tel"
+                  id="phone"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="linkdin">Linkdin:</label>
+                <input
+                  name="linkdin"
+                  type="text"
+                  id="linkdin"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="prevSection(1)"
+                >
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  onclick="nextSection(3)"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="section d-none" id="section3">
+              <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea
+                  name="feedback"
+                  id="feedback"
+                  rows="4"
+                  class="form-control"
+                ></textarea>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  onclick="prevSection(2)"
+                >
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="submitForm()"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+            <!-- section 4  -->
+            <div class="section d-none" id="section4">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input
+                  name="name"
+                  type="text"
+                  id="name2"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="age">Age:</label>
+                <input
+                  name="number"
+                  type="number"
+                  id="age2"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="name">Poste Actuel:</label>
+                <input
+                  name="name"
+                  type="text"
+                  id="Poste2"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="genre">Genre:</label>
+                <input
+                  name="genre"
+                  type="text"
+                  id="genre2"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="education">Éducation:</label>
+                <input
+                  name="education"
+                  type="text"
+                  id="education2"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="specialisation">Spécialisation:</label>
+                <input
+                  name="specialisation"
+                  type="text"
+                  id="specialisation2"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="langue">Langues Parlées:</label>
+                <input
+                  name="number "
+                  type="number"
+                  id="langues2"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Adresse E-mail Professionnelle:</label>
+                <input
+                  name="email"
+                  type="tel"
+                  id="email2"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input
+                  name="phone"
+                  type="tel"
+                  id="phone2"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="linkdin">Linkdin:</label>
+                <input
+                  name="linkdin"
+                  type="text"
+                  id="linkdin2"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea
+                  name="feedback"
+                  id="feedback2"
+                  rows="4"
+                  class="form-control"
+                ></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
